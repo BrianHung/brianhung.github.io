@@ -20,7 +20,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
 
 		<!--style sheet-->
-		<link href="file:///F:/brianhung.info/style.html" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 
 		<!--Emoji support-->
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.3.0"></script>
@@ -31,30 +31,30 @@
 	  <div class="container">
 
 	  	<div id="main">
-					<h2 class="page-header"> brianhung.info </h2>
-				</div>
+				<h2 class="page-header"> brianhung.info </h2>
+			</div>
 
-				<blockquote>
-					<p> "Not all those who wander are lost." </p>
-					<p> — J.R.R. Tolkien </p>
-				</blockquote>
+			<blockquote>
+				<p> "Not all those who wander are lost." </p>
+				<p> — J.R.R. Tolkien </p>
+			</blockquote>
 
-	      <div class="jumbotron">
-					<h1 id="ETH-price"> $0.00 </h1>
-					<script>
-						$(document).ready(function() {
-							$.getJSON('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,SC,GNT&tsyms=BTC,USD', function(cryptoData) {
-									var ETH_in_USD = cryptoData.ETH.USD;
-									document.getElementById("ETH-price").innerHTML = JSON.stringify(ETH_in_USD, null, 4);
-							});
+	    <div class="jumbotron">
+				<h1 id="ETH-price"> $0.00 </h1>
+				<script>
+					$(document).ready(function() {
+						$.getJSON('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,SC,GNT&tsyms=BTC,USD', function(cryptoData) {
+								var ETH_in_USD = cryptoData.ETH.USD;
+								document.getElementById("ETH-price").innerHTML = "$" + JSON.stringify(ETH_in_USD, null, 4);
 						});
-					</script>
-	        <p class="lead">ETH</p>
-	      </div> <!-- /jumbotron -->
+					});
+				</script>
+	      <p class="lead">ETH</p>
+	    </div> <!-- /jumbotron -->
 
-	      <footer class="footer">
-	        <p> 🚀 HODL. </p>
-	      </footer>
+	    <footer class="footer">
+	      <p> 🚀 HODL. </p>
+	    </footer>
 
 	    </div> <!-- /container -->
 
