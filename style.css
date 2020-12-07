@@ -1,8 +1,19 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif !important; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif !important; }
+}
+
 /* Space out content a bit */
 body {
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.page-header {
+  font-weight: 600;
+  letter-spacing: -0.02rem;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
